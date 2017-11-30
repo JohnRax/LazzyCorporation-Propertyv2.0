@@ -14,8 +14,8 @@ function reg_user()
 {
 	
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
@@ -78,10 +78,10 @@ function reg_user()
 }
 
 function login(){
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
 	
+	$servername = "localhost";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
@@ -136,8 +136,8 @@ function login(){
 function post_property(){
 	
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
@@ -324,18 +324,18 @@ function property_list() {
 	
 	
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$i = "'";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
                     $password);
-    		    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	catch(PDOException $ex){
 		echo 'Connection failed: ' . $ex->getmessage();
 	}
+	
 	if($type=="forsale"){
 		try{
 			//Select User With Same Email && Pass
@@ -687,9 +687,8 @@ function property_page(){
 	}
 	
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$i = "'";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
@@ -960,10 +959,9 @@ function property_page(){
 
 function home(){
 
-		$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$i = "'";
+	$servername = "localhost";
+	$username = "lazzy";
+	$password = "wonglazzy";
 	try{
     $dbh = new pdo( "mysql:host=localhost;dbname=lazzypropertiesdb",
                     $username,
