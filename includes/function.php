@@ -339,7 +339,7 @@ function property_list() {
 	if($type=="forsale"){
 		try{
 			//Select User With Same Email && Pass
-			$query="SELECT * FROM Property_List WHERE Type='a'";
+			$query="SELECT * FROM Property_List WHERE TYPE='a' ORDER BY `Property_ID` DESC  ";
 			if(!$country==''){
 				$query .= " AND Country='".$country."'";
 			}
@@ -369,14 +369,17 @@ function property_list() {
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+                                </div>
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
+                                <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>
                                     <br/>
 									<span class="pull-left"><b> ' . htmlentities($row['StreetAddress']) .', ' . htmlentities($row['City']) . ', ' . htmlentities($row['State']) . ', ' . htmlentities($row['Country']) . '</b> </span>
-                                    <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
+                                    
                                     <p style="display: none;">'. substr($desc,0,50) .'...</p>
                                 <div class="property-icon">
                                 <img src="assets/img/icon/bed.png">(' . htmlentities($row['Bed']) . ')|
@@ -403,7 +406,7 @@ function property_list() {
 	else if($type=="forrent"){
 		try{
 			//Select User With Same Email && Pass
-			$query="SELECT * FROM Property_List WHERE Type='b'";
+			$query="SELECT * FROM Property_List WHERE Type='b' ORDER BY `Property_ID` DESC";
 			if(!$country==''){
 				$query .= " AND Country='".$country."'";
 			}
@@ -433,14 +436,17 @@ function property_list() {
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+                                </div>
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
+                                <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>
                                     <br/>
 									<span class="pull-left"><b> ' . htmlentities($row['StreetAddress']) .', ' . htmlentities($row['City']) . ', ' . htmlentities($row['State']) . ', ' . htmlentities($row['Country']) . '</b> </span>
-                                    <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
+                                    
                                     <p style="display: none;">'. substr($desc,0,50) .'...</p>
                                 <div class="property-icon">
                                 <img src="assets/img/icon/bed.png">(' . htmlentities($row['Bed']) . ')|
@@ -467,7 +473,7 @@ function property_list() {
 	else if($type=="new"){
 		try{
 			//Select User With Same Email && Pass
-			$query="SELECT * FROM Property_List WHERE Type='c'";
+			$query="SELECT * FROM Property_List WHERE Type='c' ORDER BY `Property_ID` DESC";
 			if(!$country==''){
 				$query .= " AND Country='".$country."'";
 			}
@@ -497,14 +503,17 @@ function property_list() {
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+                                </div>
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
+                                <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>
-									<br/>
+                                    <br/>
 									<span class="pull-left"><b> ' . htmlentities($row['StreetAddress']) .', ' . htmlentities($row['City']) . ', ' . htmlentities($row['State']) . ', ' . htmlentities($row['Country']) . '</b> </span>
-                                    <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
+                                    
                                     <p style="display: none;">'. substr($desc,0,50) .'...</p>
                                 <div class="property-icon">
                                 <img src="assets/img/icon/bed.png">(' . htmlentities($row['Bed']) . ')|
@@ -531,7 +540,7 @@ function property_list() {
 	else if($type=="commercialland"){
 		try{
 			//Select User With Same Email && Pass
-			$query="SELECT * FROM Property_List WHERE Type='d'";
+			$query="SELECT * FROM Property_List WHERE Type='d' ORDER BY `Property_ID` DESC";
 			if(!$country==''){
 				$query .= " AND Country='".$country."'";
 			}
@@ -561,14 +570,17 @@ function property_list() {
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+                                </div>
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
+                                <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>
-									<br/>
+                                    <br/>
 									<span class="pull-left"><b> ' . htmlentities($row['StreetAddress']) .', ' . htmlentities($row['City']) . ', ' . htmlentities($row['State']) . ', ' . htmlentities($row['Country']) . '</b> </span>
-                                    <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
+                                    
                                     <p style="display: none;">'. substr($desc,0,50) .'...</p>
                                 <div class="property-icon">
                                 <img src="assets/img/icon/bed.png">(' . htmlentities($row['Bed']) . ')|
@@ -595,7 +607,7 @@ function property_list() {
 	else {
 		
 		try{
-			$query="SELECT * FROM Property_List";
+			$query="SELECT * FROM Property_List ORDER BY `Property_ID` DESC";
 			if(!$country==''){
 				$query .= " WHERE Country='".$country."'";
 			}
@@ -626,14 +638,18 @@ function property_list() {
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+                                </div>
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
+                                <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>
-                                    <span class="proerty-price pull-right"> &#8369 ' . htmlentities($row['Price']) . '</span>
+                                    <br/>
 									<span class="pull-left"><b> ' . htmlentities($row['StreetAddress']) .', ' . htmlentities($row['City']) . ', ' . htmlentities($row['State']) . ', ' . htmlentities($row['Country']) . '</b> </span>
-                                    <p style="display: none;">'. substr($desc,0,50) .' ...</p>
+                                    
+                                    <p style="display: none;">'. substr($desc,0,50) .'...</p>
                                 <div class="property-icon">
                                 <img src="assets/img/icon/bed.png">(' . htmlentities($row['Bed']) . ')|
                                 <img src="assets/img/icon/shawer.png">(' . htmlentities($row['Bath']) . ')|
@@ -975,12 +991,15 @@ function home(){
 				echo'<div class="col-sm-6 col-md-3 p0">
 						<div class="box-two proerty-item">
 							<div class="item-thumb">
-                            <a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" ><img src="includes/images/prop/'.htmlentities($row['Property_ID']).'/1.jpg"></a>
+                            	<a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" ><img src="includes/images/prop/'.htmlentities($row['Property_ID']).'/1.jpg"></a>
                             </div>
 
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html">' .htmlentities($row['Title']) . '</a></h5>
+                                    <h5><a href="index.php?source=property-page&propId=' . htmlentities($row['Property_ID']) . '" >' .htmlentities($row['Title']) . '</a></h5>
+
+                                </div> 
                                     <div class="dot-hr"></div>
+                                <div class="item-entry">
                                     <span class="pull-left"><b> Land :</b>' . htmlentities($row['Land']) . 'sqm </span>
 									<br/>
 									<span class="pull-left"><b> Floor :</b> ' . htmlentities($row['Floor']) . 'sqm </span>

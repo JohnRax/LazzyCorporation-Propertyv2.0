@@ -1,6 +1,6 @@
-          <script src="assets/js/jquery-1.10.2.min.js"></script>
+          <!-- <script src="assets/js/jquery-1.10.2.min.js"></script> -->
         <!-- boy-sale area -->
-        <div class="boy-sale-area">
+        <!-- <div class="boy-sale-area">
             <div class="container">
                 <div class="row">
 
@@ -37,4 +37,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
